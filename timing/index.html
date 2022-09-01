@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            position: relative;
+        }
+    
+        div {}
+    
+        img {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            
+        }
+    .horse1{
+        top:20%
+    }
+    .horse2{
+        top:50%
+    }
+    .horse3{
+        top:70%
+    }
+        button {
+            position: absolute;
+            width: 100px;
+            height: 40px;
+            top:90%
+        }
+    
+        hr {
+            width: 10px;
+            height: 100px;
+            background-color: black;
+            position: absolute;
+right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <img class="horse1" src="./images/pexels-helena-lopes-1996333.jpg" alt="">
+        <img class="horse2" src="./images/images.png" alt="">
+        <img class="horse3" src="./images/GettyImages-909948608-5c69cd9446e0fb0001560d1a.jpg" alt="">
+        <button>start</button>
+        <hr>
+    </div>
+</body>
+
+
+
+<script>
+    let btn = document.querySelector("button")
+    let horse1 = document.querySelector(".horse1")
+    let horse2 = document.querySelector(".horse2")
+    let horse3 = document.querySelector(".horse3")
+    let container = document.querySelector(".container")
+
+
+
+    let random1 = Math.floor(Math.random())
+    let random2 = Math.floor(Math.random())
+    let random3 = Math.floor(Math.random())
+
+let left =0
+let left2=0
+let left3=0
+    btn.addEventListener('click', ()=>{
+       let a= setInterval(() => {
+   
+       
+     left=  left+Math.floor(Math.random(10)*50)
+     horse1.style.left=`${left}px`
+    
+     left2=  left2+Math.floor(Math.random(10)*50)
+     horse2.style.left=`${left2}px`
+      
+     left3=  left3+Math.floor(Math.random(10)*50)
+     horse3.style.left=`${left3}px`
+
+}, 500)
+    })
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</html>
